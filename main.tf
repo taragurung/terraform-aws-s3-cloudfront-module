@@ -19,7 +19,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
   enabled             = true            # This is the flag to enable/disable distribution
   is_ipv6_enabled     = true            # 
-  comment             = "Some comment"
+  comment             = "Cloudfront for static website created using terraform"
   default_root_object = "index.html"    #its the root object to access when the request is made to ROOT url
 
 #-----------------
@@ -53,12 +53,11 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     viewer_protocol_policy = "allow-all"
     min_ttl                = 0
     default_ttl            = 0
-    #max_ttl                = 86400
-    max_ttl                = 0
+    max_ttl                = 86400
   }
 
-  #make it modular too
-  price_class = "PriceClass_100"
+  #Edge locations
+  price_class = "PriceClass_ALL"
 
   #---------------
   # GEO restrictions

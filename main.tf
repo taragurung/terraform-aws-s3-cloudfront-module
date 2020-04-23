@@ -57,7 +57,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 
   #Edge locations
-  price_class = "PriceClass_ALL"
+  price_class = "PriceClass_All"
 
   #---------------
   # GEO restrictions

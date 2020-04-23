@@ -7,5 +7,7 @@ The module will create a S3 bucket with the name supplied and make it web hosted
 # About Cloudfront:
 This will helpt to distribute static content to different edge location provide by AWS. Here we choose to distribute in all edge locations.
 
+#### Maintainer:
+Feel free to message me for suggestions and changes. email: taraprasad336@gmail.com
 
 
